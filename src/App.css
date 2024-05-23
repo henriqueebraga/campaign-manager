@@ -14,10 +14,18 @@
 
 .App-main {
   text-align: left;
-  padding: 2vmin;
+  padding: 15px 15px 80px 15px;
 }
 
 .nodes {
-  background-color: rgba(27,31,35,.05);
+  background-color: rgba(27, 31, 35, .05);
   padding: 2vmin;
+}
+
+.App-error-message {
+  color: rgb(230, 89, 8);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
 }
