@@ -33,6 +33,7 @@ jobs:
         run: |
           echo "Deploying to environment $ENVIRONMENT"
           echo "Selected theme $THEME"
+          echo "Secret URL: $MY_SECRET_URL"
 
       - name: Install dependencies
         run: npm install
