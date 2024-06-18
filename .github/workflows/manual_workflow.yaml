@@ -32,7 +32,7 @@ jobs:
       - name: Print environment variable
         run: |
           echo "Deploying to environment $ENVIRONMENT"
-          echo: "Selected theme $THEME"
+          echo "Selected theme $THEME"
 
       - name: Install dependencies
         run: npm install
