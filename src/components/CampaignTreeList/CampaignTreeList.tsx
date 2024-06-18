@@ -5,7 +5,7 @@ import CampaignNode from '../CampaignNode/CampaignNode';
 import { NodeElement, SetNodeElement } from '../../types/types';
 
 interface CampaignTreeListProps {
-    filteredData: NodeElement | undefined;
+    filteredData: NodeElement;
     isOpen: { [key: string]: boolean };
     searchTerm: string;
     toggleAccordion: (id: string) => void;

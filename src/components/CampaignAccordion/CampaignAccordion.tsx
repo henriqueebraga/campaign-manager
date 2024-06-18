@@ -74,6 +74,7 @@ const CampaignAccordion: React.FC<CampaignAccordionProps> = ({ data }) => {
         };
     
         const hasOpened = searchAndOpen(elements);
+        setIsSearchMatched(hasOpened);
         setOpenSections(openIds);    
         if (hasOpened) {
             const firstOpenedId = Object.keys(openIds)[0];
@@ -105,7 +106,6 @@ const CampaignAccordion: React.FC<CampaignAccordionProps> = ({ data }) => {
         )
     ), [filteredData, openSections, debouncedSearchTerm, toggleAccordion]);
     
-
     return (
         <div className={styles.container} ref={accordionRef}>
             <SearchBar searchQuery={searchTerm} handleSearchChange={(e) => setSearchTerm(e.target.value)} />
