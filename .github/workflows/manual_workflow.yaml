@@ -21,6 +21,7 @@ jobs:
     env:
       ENVIRONMENT: ${{ github.event.inputs.environment }}
       THEME: ${{ github.event.inputs.preferredTheme }}
+      SECRETE_URL: ${{ vars.MY_SECRET_URL }}
     
     steps:
       - uses: actions/checkout@v3
@@ -33,7 +34,7 @@ jobs:
         run: |
           echo "Deploying to environment $ENVIRONMENT"
           echo "Selected theme $THEME"
-          echo "Secret URL: $MY_SECRET_URL"
+          echo "Secret URL: $SECRETE_URL"
 
       - name: Install dependencies
         run: npm install
