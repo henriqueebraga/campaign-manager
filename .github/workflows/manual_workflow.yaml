@@ -20,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENVIRONMENT: ${{ github.event.inputs.environment }}
+      TREME: ${{ github.event.inputs.preferredTheme }}
     
     steps:
       - uses: actions/checkout@v3
@@ -29,7 +30,9 @@ jobs:
           node-version: 20.x
       
       - name: Print environment variable
-        run: echo "Deploying to environment $ENVIRONMENT"
+        run: |
+          echo "Deploying to environment $ENVIRONMENT"
+          echo "Selected theme: $THEME"
 
       - name: Install dependencies
         run: npm install
