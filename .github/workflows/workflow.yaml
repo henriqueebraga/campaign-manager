@@ -9,6 +9,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Use secret as environment variable
+        run: echo "The secret environment is $MY_SECRET_ENV"
       - name: Using Node.js
         uses: actions/setup-node@v2
         with:
