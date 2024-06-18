@@ -6,6 +6,8 @@ on:
 jobs:
   continuous-integration:
     runs-on: ubuntu-latest
+    env:
+      MY_SECRET_ENV: ${{ secrets.MY_SECRET_ENV }}
 
     steps:
       - uses: actions/checkout@v3
