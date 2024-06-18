@@ -104,7 +104,7 @@ const CampaignAccordion: React.FC<CampaignAccordionProps> = ({ data }) => {
         ) : (
             <div className={styles.error_message}>No search results found.</div>
         )
-    ), [filteredData, openSections, debouncedSearchTerm, toggleAccordion]);
+    ), [filteredData, openSections, debouncedSearchTerm, toggleAccordion, isSearchMatched]);
     
     return (
         <div className={styles.container} ref={accordionRef}>
