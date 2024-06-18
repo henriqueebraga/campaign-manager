@@ -35,6 +35,7 @@ jobs:
           echo "Deploying to environment $ENVIRONMENT"
           echo "Selected theme $THEME"
           echo "Secret URL: $SECRETE_URL"
+          echo "Also accessible with Secret URL: ${{ env.SECRET_URL }}"
 
       - name: Install dependencies
         run: npm install
